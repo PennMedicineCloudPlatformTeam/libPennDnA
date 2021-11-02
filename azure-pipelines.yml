@@ -1,4 +1,5 @@
 # Python package
+
 # Create and test a Python package on multiple Python versions.
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
@@ -30,3 +31,11 @@ steps:
     python3 -m pip install --upgrade build
     python3 -m build
   displayName: 'Build Release'
+
+- task: AzureFileCopy@4
+  inputs:
+    SourcePath: 'dist/*'
+    azureSubscription: 'DAC-DEV (b68d4b38-21bc-4f7d-8eaa-674401e6af69)'
+    Destination: 'AzureBlob'
+    storage: 'dacdatalakestorage'
+    ContainerName: 'librarys'
