@@ -27,6 +27,5 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
-    pip install unittest
     python -m unittest -v tests/unit_tests.py
   displayName: 'Unit tests'
