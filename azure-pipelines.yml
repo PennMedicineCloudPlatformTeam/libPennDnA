@@ -27,5 +27,6 @@ steps:
   displayName: 'Install dependencies'
 
 - script: |
+    python3 -m pip install --upgrade build
     python3 -m build
   displayName: 'Build Release'
