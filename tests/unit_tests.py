@@ -1,7 +1,7 @@
 import unittest
-from DACPYLib import extract
-from DACPYLib import load
-from DACPYLib import transform
+from extract import extract_tools
+from load import load_tools
+from transform import transform_tools
 
 
 class SelfTestCase(unittest.TestCase):
