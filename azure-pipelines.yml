@@ -37,10 +37,3 @@ steps:
     SourceFolder: 'dist'
     Contents: '**'
     TargetFolder: '$(System.ArtifactsDirectory)'
-
-- task: DownloadBuildArtifacts@0
-  inputs:
-    buildType: 'current'
-    downloadType: 'single'
-    artifactName: 'drop'
-    downloadPath: '$(System.ArtifactsDirectory)'
