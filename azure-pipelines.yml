@@ -32,10 +32,8 @@ steps:
     python3 -m build
   displayName: 'Build Release'
 
-- task: AzureFileCopy@4
+- task: CopyFiles@2
   inputs:
-    SourcePath: 'dist/*'
-    azureSubscription: 'DAC-DEV (b68d4b38-21bc-4f7d-8eaa-674401e6af69)'
-    Destination: 'AzureBlob'
-    storage: 'dacdatalakestorage'
-    ContainerName: 'librarys'
+    SourceFolder: 'dist'
+    Contents: '**'
+    TargetFolder: 'archive'
