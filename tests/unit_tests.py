@@ -1,18 +1,16 @@
 import unittest
 from extract import extract_tools
-from load import load_tools
-from transform import transform_tools
 
 
 class SelfTestCase(unittest.TestCase):
 
     def setUp(self):
-        self.extract_dummy = extract_dummy("INPUTSTRING")
+        True
 
     def test_extract(self):
         """Test Extract functions"""
 
-        result = self.extract.extract_dummy("EXTRACTTEST")
+        result = extract_tools.extract_dummy("EXTRACTTEST")
         self.assertEqual(result, "EXTRACTTEST")
 
 

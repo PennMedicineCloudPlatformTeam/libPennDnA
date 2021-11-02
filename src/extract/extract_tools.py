@@ -1,2 +1,2 @@
-def extract_dummy(inputstr: str) -> str:
+def extract_dummy(inputstr: str = "") -> str:
     return inputstr
