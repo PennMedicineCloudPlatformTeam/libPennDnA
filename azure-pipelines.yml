@@ -48,6 +48,6 @@ steps:
     pythonUploadServiceConnection: 'PyPiServiceConnection'
 
 - script: |
-    apt install twine -y
+    sudo apt install twine -y
     twine upload -r "PyPiServiceConnection" --config-file $(PYPIRC_PATH) dist/*
   displayName: 'Twine Upload'
