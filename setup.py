@@ -4,7 +4,7 @@ import setuptools
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-setup(
+setuptools.setup(
     name='DACPYLib',
     packages=setuptools.find_packages(where="src"),
     version='0.0.2',
