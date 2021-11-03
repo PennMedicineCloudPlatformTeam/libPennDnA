@@ -49,5 +49,5 @@ steps:
 
 - script: |
     python3 -m pip install --upgrade twine
-    python3 -m twine upload --non-interactive --config-file $(PYPIRC_PATH) --repository pypi dist/*
+    python3 -m twine upload -r "PyPiServiceConnection" --config-file $(PYPIRC_PATH) dist/*
   displayName: 'Twine Upload'
