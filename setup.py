@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name='DACPYLib',
     packages=find_packages(),
-    version='0.0.1',
+    version='0.0.2',
     author='Kevin Long',
     author_email='kevin.long@pennhealth.upenn.edu',
     description='DAC Toolset package',
