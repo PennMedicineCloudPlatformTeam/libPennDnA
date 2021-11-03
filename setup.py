@@ -7,15 +7,13 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setuptools.setup(
     name='DACPYLib',
     packages=setuptools.find_packages(where="src"),
-    version='0.0.2',
+    version='0.0.3',
     author='Kevin Long',
     author_email='kevin.long@pennhealth.upenn.edu',
     description='DAC Toolset package',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url={"https://dev.azure.com/UPHS-DAC/AnalyticsPipeline/_git/DACPYLib"
-        "Bug Tracker": "https://dev.azure.com/UPHS-DAC/AnalyticsPipeline/_git/DACPYLib",
-    },
+    url="https://github.com/pypa/DACPYLib",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
