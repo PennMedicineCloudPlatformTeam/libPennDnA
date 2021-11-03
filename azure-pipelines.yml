@@ -41,11 +41,3 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'DACPYLib'
     publishLocation: 'Container'
-
-- task: AzureFileCopy@4
-  inputs:
-    SourcePath: '$(Build.ArtifactStagingDirectory)'
-    azureSubscription: 'DAC-DEV (b68d4b38-21bc-4f7d-8eaa-674401e6af69)'
-    Destination: 'AzureBlob'
-    storage: 'dacdatalakestorage'
-    ContainerName: 'libraries'
