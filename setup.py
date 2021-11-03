@@ -1,12 +1,12 @@
-from setuptools import find_packages, setup
 import unittest
+import setuptools
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
     name='DACPYLib',
-    packages=find_packages(),
+    packages=setuptools.find_packages(where="src"),
     version='0.0.2',
     author='Kevin Long',
     author_email='kevin.long@pennhealth.upenn.edu',
