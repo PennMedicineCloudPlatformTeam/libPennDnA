@@ -41,3 +41,8 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'DACPYLib'
     publishLocation: 'Container'
+
+- task: TwineAuthenticate@1
+  inputs:
+    artifactFeed: 'AnalyticsPipeline/AnalyticsFeed'
+    pythonUploadServiceConnection: 'PyPiServiceConnection'
