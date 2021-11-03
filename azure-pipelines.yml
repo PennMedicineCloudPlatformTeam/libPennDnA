@@ -46,5 +46,8 @@ steps:
   inputs:
     artifactFeed: 'AnalyticsPipeline/AnalyticsFeed'
     pythonUploadServiceConnection: 'PyPiServiceConnection'
+
 - script: |
-   twine upload -r "PyPiServiceConnection" --config-file $(PYPIRC_PATH) dist/*
+    python3 -m pip install --upgrade twine
+    python3 -m twine upload --repository pypi dist/* --config-file $(PYPIRC_PATH)
+  displayName: 'Twine Upload'
