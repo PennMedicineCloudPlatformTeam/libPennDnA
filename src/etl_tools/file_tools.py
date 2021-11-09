@@ -1,4 +1,6 @@
-from pyspark import dbutils
+import findspark
+findspark.init()
+import pyspark
 
 def file_exists(path):
     try:
