@@ -46,3 +46,9 @@ steps:
   inputs:
     artifactFeed: 'AnalyticsPipeline/AnalyticsFeed'
     pythonUploadServiceConnection: 'PyPiServiceConnection'
+
+- script: |
+    sudo apt install twine -y
+    cat $(PYPIRC_PATH)
+    twine upload -r 'PyPiEndPoint' --config-file $(PYPIRC_PATH) dist/*
+  displayName: 'Twine Upload'
