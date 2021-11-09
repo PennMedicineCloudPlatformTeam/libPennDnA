@@ -1,3 +1,5 @@
+from pyspark import dbutils
+
 def file_exists(path):
     try:
         dbutils.fs.ls(path)
