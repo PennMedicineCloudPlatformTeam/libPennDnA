@@ -1,6 +1,30 @@
-[build-system]
-requires = [
-    "setuptools>=42",
-    "wheel"
+[project]
+name = "libPennDnA"
+version = "0.0.1"
+authors = [
+  { name="Kevin Long", email="kevin.long@pennmedicine.upenn.edu" },
 ]
-build-backend = "setuptools.build_meta"
+description = "Data enginering toolset"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://dev.azure.com/UPHS-DAC/AnalyticsPipeline/_git/libPennDnA"
+Issues = "https://dev.azure.com/UPHS-DAC/AnalyticsPipeline/_workitems/create/Issue"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/etl_tools", "src/example_package"]
